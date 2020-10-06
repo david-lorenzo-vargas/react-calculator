@@ -1,8 +1,14 @@
-import React from 'react';
-import Button from './components/button';
+import React from 'react'
+import { Calculator } from './components/calculator'
 
-const App = () => (
-  <Button />
-);
+import './components/reset.scss'
 
-export default App;
+const App = () => {
+  return (
+    <div>
+      <Calculator />
+    </div>
+  )
+}
+
+export default App
