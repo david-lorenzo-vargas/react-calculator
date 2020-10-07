@@ -1,8 +1,8 @@
-import React from 'react'
-import { Button } from '../button'
-import { Row } from '../grid'
+import React from 'react';
+import { Button } from '../button';
+import { Row } from '../grid';
 
-import styles from './body.scss'
+import styles from './body.scss';
 
 const arrRowOne = [
   {
@@ -37,7 +37,7 @@ const arrRowOne = [
     type: 'operation',
     value: 'division',
   },
-]
+];
 
 const arrRowTwo = [
   {
@@ -68,7 +68,7 @@ const arrRowTwo = [
     type: 'operation',
     value: 'multiply',
   },
-]
+];
 
 const arrRowThree = [
   {
@@ -99,7 +99,7 @@ const arrRowThree = [
     type: 'operation',
     value: 'substract',
   },
-]
+];
 
 const arrRowFour = [
   {
@@ -130,7 +130,7 @@ const arrRowFour = [
     type: 'operation',
     value: 'add',
   },
-]
+];
 
 const arrRowFive = [
   {
@@ -155,9 +155,9 @@ const arrRowFive = [
     value: 'equal',
     size: 'big',
   },
-]
+];
 
-const arrs = [arrRowOne, arrRowTwo, arrRowThree, arrRowFour, arrRowFive]
+const arrs = [arrRowOne, arrRowTwo, arrRowThree, arrRowFour, arrRowFive];
 
 const Body = (props) => {
   const generateColumn = (item) => (
@@ -172,7 +172,7 @@ const Body = (props) => {
         onClick={props.onButtonClick}
       />
     </Row>
-  )
+  );
 
   return (
     <div className={styles.calculator__body}>
@@ -180,7 +180,7 @@ const Body = (props) => {
         <Row>{arrItem.map(generateColumn)}</Row>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Body
+export default Body;
