@@ -1,35 +1,33 @@
 .button {
+  border-radius: 50%;
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  text-transform: uppercase;
-  text-align: center;
   font-size: 15px;
   font-weight: bold;
+  height: 40px;
   margin: 20px;
-  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 40px;
   cursor: pointer;
 
 
   &--theme-grey {
-    background-color:rgb(40, 47, 61);
-    color: white;
+    background-color: rgb(40, 47, 61);
+    color: rgb(255, 255, 255);
   }
 
   &--theme-pink {
-    background-color:rgba(255, 43, 131, 0.836);
-    color:white;
+    background-color: rgba(255, 43, 131, 0.836);
+    color: rgb(255, 255, 255);
   }
 
   &--pink {
-    color:rgba(255, 43, 131, 0.836)
+    color: rgba(255, 43, 131, 0.836)
   }
 
   &--big{
-    width: 120px;
     border-radius: 20px;
+    width: 120px;
   }
-
-
 }
