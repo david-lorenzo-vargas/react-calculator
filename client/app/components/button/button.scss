@@ -1,5 +1,6 @@
 .button {
   border-radius: 50%;
+  cursor: pointer;
   display: inline-block;
   font-size: 15px;
   font-weight: bold;
@@ -9,7 +10,7 @@
   text-align: center;
   text-transform: uppercase;
   width: 40px;
-  cursor: pointer;
+
 
 
   &--theme-grey {
@@ -26,7 +27,7 @@
     color: rgba(255, 43, 131, 0.836)
   }
 
-  &--big{
+  &--big {
     border-radius: 20px;
     width: 120px;
   }
