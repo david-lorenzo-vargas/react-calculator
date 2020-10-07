@@ -1,14 +1,12 @@
-import React from 'react'
-import { Calculator } from './components/calculator'
+import React from 'react';
+import { Calculator } from './components/calculator';
 
-import './components/reset.scss'
+import './components/reset.scss';
 
-const App = () => {
-  return (
-    <div>
-      <Calculator />
-    </div>
-  )
-}
+const App = () => (
+  <div>
+    <Calculator />
+  </div>
+);
 
-export default App
+export default App;
