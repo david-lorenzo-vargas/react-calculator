@@ -24,6 +24,8 @@
         "blankLine": "always",
         "prev": "*",
         "next": [
+          "multiline-block-like",
+          "multiline-expression",
           "block",
           "block-like",
           "cjs-export",
@@ -38,6 +40,8 @@
       {
         "blankLine": "always",
         "prev": [
+          "multiline-block-like",
+          "multiline-expression",
           "block",
           "block-like",
           "cjs-export",
