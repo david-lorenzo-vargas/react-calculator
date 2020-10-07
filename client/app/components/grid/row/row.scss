@@ -1,6 +1,6 @@
 .grid {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 
   &--column {
@@ -8,6 +8,6 @@
   }
 
   &--row {
-     flex-direction: row;
+    flex-direction: row;
   }
 }
