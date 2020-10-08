@@ -1,6 +1,6 @@
 import React from 'react';
-import { Body } from '../body';
-import { Header } from '../header';
+import Body from '../body';
+import Header from '../header';
 
 import '../reset.scss';
 import styles from './calculator.scss';
@@ -24,13 +24,21 @@ class Calculator extends React.Component {
 
     if (buttonType === 'add') {
       return newSavedValue + newButtonValue;
-    } else if (buttonType === 'substract') {
+    }
+
+    if (buttonType === 'substract') {
       return newSavedValue - newButtonValue;
-    } else if (buttonType === 'multiply') {
+    }
+
+    if (buttonType === 'multiply') {
       return newSavedValue * newButtonValue;
-    } else if (buttonType === 'division') {
+    }
+
+    if (buttonType === 'division') {
       return newSavedValue / newButtonValue;
-    } else if (buttonType === 'percentage') {
+    }
+
+    if (buttonType === 'percentage') {
       return this.calculatePercentages();
     }
 
@@ -55,11 +63,12 @@ class Calculator extends React.Component {
   }
 
   handlePercentage(value) {
+    const { buttonValue, savedValue, buttonType } = this.state;
     return {
-      buttonValue: this.state.buttonValue,
+      buttonValue: { buttonValue },
       buttonType: value,
-      savedValue: this.state.savedValue,
-      savedButtonType: this.state.buttonType,
+      savedValue: { savedValue },
+      savedButtonType: { buttonType },
     };
   }
 
@@ -72,18 +81,21 @@ class Calculator extends React.Component {
   }
 
   handleNumber(value) {
-    const buttonValueNumber = this.state.buttonValue + value;
+    const { buttonValue } = this.state;
+    const buttonValueNumber = buttonValue + value;
+
     return {
       buttonValue: buttonValueNumber,
     };
   }
 
   handleOpposite(value) {
+    const { buttonValue, savedValue, buttonType } = this.state;
     return {
-      buttonValue: this.state.buttonValue * -1,
+      buttonValue: { buttonValue } * -1,
       buttonType: value,
-      savedValue: this.state.savedValue * -1,
-      savedButtonType: this.state.buttonType,
+      savedValue: { savedValue } * -1,
+      savedButtonType: { buttonType },
     };
   }
 
@@ -115,34 +127,45 @@ class Calculator extends React.Component {
 
   calculatePercentages() {
     const {
-      buttonValue, buttonType, savedValue, savedButtonType,
+      buttonValue, savedValue, savedButtonType,
     } = this.state;
     const newSavedValue = Number(savedValue);
     const newButtonValue = Number(buttonValue);
     const calcPercentage = (newSavedValue * newButtonValue) / 100;
     const valuePercentage = newButtonValue * 0.01;
 
-    if (buttonType === 'percentage' && savedButtonType === 'add') {
+    if (savedButtonType === 'add') {
       return calcPercentage + newSavedValue;
-    } else if (buttonType === 'percentage' && savedButtonType === 'substract') {
-      return (calcPercentage - newSavedValue) * -1
-    } else if (buttonType === 'percentage' && savedButtonType === 'multiply') {
-      return newSavedValue * valuePercentage
-    } else if (buttonType === 'percentage' && savedButtonType === 'division') {
-      return newSavedValue / valuePercentage
     }
+
+    if (savedButtonType === 'substract') {
+      return (calcPercentage - newSavedValue) * -1;
+    }
+
+    if (savedButtonType === 'multiply') {
+      return newSavedValue * valuePercentage;
+    }
+
+    if (savedButtonType === 'division') {
+      return newSavedValue / valuePercentage;
+    }
+
+    return 0;
   }
 
   render() {
-    console.log(`button value: ${this.state.buttonValue}`);
-    console.log(`operation type: ${this.state.buttonType}`);
-    console.log(`saved value: ${this.state.savedValue}`);
-    console.log(`saved button type: ${this.state.savedButtonType}`);
+    const {
+      buttonValue, buttonType, savedValue, savedButtonType,
+    } = this.state;
+    console.log(`button value: ${buttonValue}`);
+    console.log(`operation type: ${buttonType}`);
+    console.log(`saved value: ${savedValue}`);
+    console.log(`saved button type: ${savedButtonType}`);
     console.log(this.getTotals());
 
     return (
       <div className={styles.calculator}>
-        <Header total={this.state.buttonValue || this.state.savedValue} />
+        <Header total={buttonValue || savedValue} />
         <Body
           onButtonClick={({ type, value }) => this.handleButtonClick({ type, value })}
         />
