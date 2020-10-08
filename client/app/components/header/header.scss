@@ -1,13 +1,13 @@
-.calculator__header {
+.calculator-header {
   background-color: rgb(40, 47, 61);
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 50px 50px 0 0;
   height: 50px;
   margin: auto;
   padding: 50px;
   width: 350px;
-}
 
-.calculator__header__total {
-  color: rgb(255, 255, 255);
-  font-size: 30px;
+  &__total {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+  }
 }
