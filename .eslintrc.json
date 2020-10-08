@@ -18,6 +18,17 @@
     "react"
   ],
   "rules": {
+    "class-methods-use-this": 0,
+    "operator-linebreak": 0,
+    "react/require-default-props": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
     "padding-line-between-statements": [
       "error",
       {
@@ -30,11 +41,8 @@
           "block-like",
           "cjs-export",
           "class",
-          "const",
           "export",
-          "import",
-          "let",
-          "var"
+          "import"
         ]
       },
       {
@@ -46,26 +54,10 @@
           "block-like",
           "cjs-export",
           "class",
-          "const",
           "export",
-          "import",
-          "let",
-          "var"
+          "import"
         ],
         "next": "*"
-      },
-      {
-        "blankLine": "never",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
-        "next": [
-          "const",
-          "let",
-          "var"
-        ]
       },
       {
         "blankLine": "any",
