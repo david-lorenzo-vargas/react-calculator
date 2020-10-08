@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from '../button';
+import PropTypes from 'prop-types';
+import Button from '../button';
 import { Row } from '../grid';
 
 import styles from './body.scss';
@@ -175,12 +176,16 @@ const Body = (props) => {
   );
 
   return (
-    <div className={styles.calculator__body}>
+    <div className={styles['calculator-body']}>
       {arrs.map((arrItem) => (
         <Row>{arrItem.map(generateColumn)}</Row>
       ))}
     </div>
   );
+};
+
+Body.propTypes = {
+  onButtonClick: PropTypes.func,
 };
 
 export default Body;
