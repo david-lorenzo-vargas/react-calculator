@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import styles from './row.scss';
 
@@ -16,6 +17,11 @@ const Row = (props) => {
       {children}
     </div>
   );
+};
+
+Row.propTypes = {
+  children: PropTypes.node,
+  direction: PropTypes.bool,
 };
 
 Row.defaultProps = {
