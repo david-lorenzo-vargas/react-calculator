@@ -21,7 +21,7 @@ const Row = (props) => {
 
 Row.propTypes = {
   children: PropTypes.node,
-  direction: PropTypes.bool,
+  direction: PropTypes.string,
 };
 
 Row.defaultProps = {
