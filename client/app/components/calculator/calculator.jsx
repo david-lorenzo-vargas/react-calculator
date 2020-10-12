@@ -158,14 +158,14 @@ class Calculator extends React.Component {
   }
 
   render() {
-    const {
-      buttonValue, buttonType, savedValue, savedButtonType,
-    } = this.state;
-    console.log(`button value: ${buttonValue}`);
-    console.log(`operation type: ${buttonType}`);
-    console.log(`saved value: ${savedValue}`);
-    console.log(`saved button type: ${savedButtonType}`);
-    console.log(this.getTotals());
+    const { buttonValue, savedValue } = this.state;
+    // const buttonToConsole = this.state.buttonType;
+    // const savedButtonToConsole = this.state.savedButtonType;
+    // console.log(`button value: ${buttonValue}`);
+    // console.log(`operation type: ${buttonToConsole}`);
+    // console.log(`saved value: ${savedValue}`);
+    // console.log(`saved button type: ${savedButtonType}`);
+    // console.log(this.getTotals());
 
     return (
       <div className={styles.calculator}>
