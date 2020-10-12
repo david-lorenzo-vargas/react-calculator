@@ -42,28 +42,28 @@ const arrRowOne = [
 
 const arrRowTwo = [
   {
-    id: 0,
+    id: 4,
     theme: 'grey',
     text: '7',
     type: 'num',
     value: 7,
   },
   {
-    id: 1,
+    id: 5,
     theme: 'grey',
     text: '8',
     type: 'num',
     value: 8,
   },
   {
-    id: 2,
+    id: 6,
     theme: 'grey',
     text: '9',
     type: 'num',
     value: 9,
   },
   {
-    id: 3,
+    id: 7,
     theme: 'pink',
     text: '*',
     type: 'operation',
@@ -73,28 +73,28 @@ const arrRowTwo = [
 
 const arrRowThree = [
   {
-    id: 0,
+    id: 8,
     theme: 'grey',
     text: '4',
     type: 'num',
     value: 4,
   },
   {
-    id: 1,
+    id: 9,
     theme: 'grey',
     text: '5',
     type: 'num',
     value: 5,
   },
   {
-    id: 2,
+    id: 10,
     theme: 'grey',
     text: '6',
     type: 'num',
     value: 6,
   },
   {
-    id: 3,
+    id: 11,
     theme: 'pink',
     text: '-',
     type: 'operation',
@@ -104,28 +104,28 @@ const arrRowThree = [
 
 const arrRowFour = [
   {
-    id: 0,
+    id: 12,
     theme: 'grey',
     text: '1',
     type: 'num',
     value: 1,
   },
   {
-    id: 1,
+    id: 13,
     theme: 'grey',
     text: '2',
     type: 'num',
     value: 2,
   },
   {
-    id: 2,
+    id: 14,
     theme: 'grey',
     text: '3',
     type: 'num',
     value: 3,
   },
   {
-    id: 3,
+    id: 15,
     theme: 'pink',
     text: '+',
     type: 'operation',
@@ -135,21 +135,21 @@ const arrRowFour = [
 
 const arrRowFive = [
   {
-    id: 0,
+    id: 16,
     theme: 'grey',
     text: '0',
     type: 'num',
     value: 0,
   },
   {
-    id: 1,
+    id: 17,
     theme: 'grey',
     text: '.',
     type: 'num',
     value: '.',
   },
   {
-    id: 2,
+    id: 18,
     theme: 'pink',
     text: '=',
     type: 'operation',
