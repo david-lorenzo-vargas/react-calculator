@@ -65,10 +65,10 @@ class Calculator extends React.Component {
   handlePercentage(value) {
     const { buttonValue, savedValue, buttonType } = this.state;
     return {
-      buttonValue: { buttonValue },
+      buttonValue,
       buttonType: value,
-      savedValue: { savedValue },
-      savedButtonType: { buttonType },
+      savedValue,
+      savedButtonType: buttonType,
     };
   }
 
@@ -92,10 +92,10 @@ class Calculator extends React.Component {
   handleOpposite(value) {
     const { buttonValue, savedValue, buttonType } = this.state;
     return {
-      buttonValue: { buttonValue } * -1,
+      buttonValue: buttonValue * -1,
       buttonType: value,
-      savedValue: { savedValue } * -1,
-      savedButtonType: { buttonType },
+      savedValue: savedValue * -1,
+      savedButtonType: buttonType,
     };
   }
 
@@ -133,6 +133,10 @@ class Calculator extends React.Component {
     const newButtonValue = Number(buttonValue);
     const calcPercentage = (newSavedValue * newButtonValue) / 100;
     const valuePercentage = newButtonValue * 0.01;
+
+    if (newButtonValue !== 0 && savedButtonType === '') {
+      return newButtonValue * 0.01;
+    }
 
     if (savedButtonType === 'add') {
       return calcPercentage + newSavedValue;
