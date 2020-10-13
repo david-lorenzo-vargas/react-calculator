@@ -35,7 +35,7 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
-  value: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   theme: PropTypes.string,
   color: PropTypes.string,
   size: PropTypes.string,
