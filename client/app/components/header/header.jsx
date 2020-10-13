@@ -14,7 +14,7 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  total: PropTypes.number,
+  total: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default Header;
