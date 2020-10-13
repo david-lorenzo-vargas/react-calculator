@@ -158,7 +158,28 @@ const arrRowFive = [
   },
 ];
 
-const arrs = [arrRowOne, arrRowTwo, arrRowThree, arrRowFour, arrRowFive];
+const arrs = [
+  {
+    id: 0,
+    value: arrRowOne,
+  },
+  {
+    id: 1,
+    value: arrRowTwo,
+  },
+  {
+    id: 2,
+    value: arrRowThree,
+  },
+  {
+    id: 3,
+    value: arrRowFour,
+  },
+  {
+    id: 4,
+    value: arrRowFive,
+  },
+];
 
 const Body = (props) => {
   const generateColumn = (item) => (
@@ -178,7 +199,7 @@ const Body = (props) => {
   return (
     <div className={styles['calculator-body']}>
       {arrs.map((arrItem) => (
-        <Row>{arrItem.map(generateColumn)}</Row>
+        <Row key={arrItem.id}>{arrItem.value.map(generateColumn)}</Row>
       ))}
     </div>
   );
