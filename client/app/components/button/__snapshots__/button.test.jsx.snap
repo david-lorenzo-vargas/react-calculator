@@ -10,7 +10,7 @@ exports[`Button render should render correctly 1`] = `
 </button>
 `;
 
-exports[`Button render when I am not passing the size prop should render correctly 1`] = `
+exports[`Button render should render correctly 2`] = `
 <button
   className="button button--theme-grey"
   onClick={[Function]}
@@ -20,20 +20,12 @@ exports[`Button render when I am not passing the size prop should render correct
 </button>
 `;
 
-exports[`Button render when I am passing color prop should render correctly 1`] = `
-<Button
-  color="pink"
-  text="0"
-  theme="grey"
-  type="num"
-  value={0}
+exports[`Button render should render correctly 3`] = `
+<button
+  className="button button--theme-grey button--pink"
+  onClick={[Function]}
+  type="button"
 >
-  <button
-    className="button button--theme-grey button--pink"
-    onClick={[Function]}
-    type="button"
-  >
-    0
-  </button>
-</Button>
+  0
+</button>
 `;

@@ -1,44 +1,35 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Button from './button';
 
 describe('Button', () => {
   describe('render', () => {
     it('should render correctly', () => {
-      const wrapper = shallow(<Button
-        type="num"
-        value={0}
-        text="0"
-        theme="grey"
-        size="big"
-      />);
+      const props = [
+        {
+          type: 'num',
+          value: 0,
+          text: '0',
+          theme: 'grey',
+          size: 'big',
+        },
+        {
+          type: 'num',
+          value: 0,
+          text: '0',
+          theme: 'grey',
+        },
+        {
+          type: 'num',
+          value: 0,
+          text: '0',
+          theme: 'grey',
+          color: 'pink',
+        },
+      ];
 
-      expect(wrapper).toMatchSnapshot();
-    });
-
-    describe('when I am not passing the size prop', () => {
-      it ('should render correctly', () => {
-        const wrapper = shallow(<Button
-          type="num"
-          value={0}
-          text="0"
-          theme="grey"
-        />);
-
-        expect(wrapper).toMatchSnapshot();
-      });
-    });
-
-    describe('when I am passing color prop', () => {
-      it('should render correctly', () => {
-        const wrapper = mount(<Button
-          type="num"
-          value={0}
-          text="0"
-          theme="grey"
-          color="pink"
-        />);
-
+      props.forEach((propItem) => {
+        const wrapper = shallow(<Button {...propItem} />);
         expect(wrapper).toMatchSnapshot();
       });
     });
@@ -46,7 +37,7 @@ describe('Button', () => {
     describe('when I click the button', () => {
       it('should call onClick function passing value and type', () => {
         const onClick = jest.fn();
-        const wrapper = mount(<Button
+        const wrapper = shallow(<Button
           type="num"
           value={0}
           text="0"
