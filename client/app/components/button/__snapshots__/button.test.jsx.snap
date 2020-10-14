@@ -1,25 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button render should render correctly 1`] = `
-<div>
-  <button
-    className="button button--theme-grey button--big"
-    onClick={[Function]}
-    type="button"
-  >
-    0
-  </button>
-</div>
+<button
+  className="button button--theme-grey button--big"
+  onClick={[Function]}
+  type="button"
+>
+  0
+</button>
 `;
 
 exports[`Button render when I am not passing the size prop should render correctly 1`] = `
-<div>
+<button
+  className="button button--theme-grey"
+  onClick={[Function]}
+  type="button"
+>
+  0
+</button>
+`;
+
+exports[`Button render when I am passing color prop should render correctly 1`] = `
+<Button
+  color="pink"
+  text="0"
+  theme="grey"
+  type="num"
+  value={0}
+>
   <button
-    className="button button--theme-grey"
+    className="button button--theme-grey button--pink"
     onClick={[Function]}
     type="button"
   >
     0
   </button>
-</div>
+</Button>
 `;
