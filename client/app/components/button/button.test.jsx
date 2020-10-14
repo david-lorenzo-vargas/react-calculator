@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Button from './button';
 
 describe('Button', () => {
@@ -27,20 +27,41 @@ describe('Button', () => {
 
         expect(wrapper).toMatchSnapshot();
       });
+    });
 
-      it('should add size "big" only when it is passed by props', () => {
-        const wrapper = shallow(<Button
+    describe('when I am passing color prop', () => {
+      it('should render correctly', () => {
+        const wrapper = mount(<Button
           type="num"
           value={0}
           text="0"
           theme="grey"
-          size="big"
+          color="pink"
         />);
 
-        const received = wrapper.instance().props.size;
-        const expected = 'big';
+        expect(wrapper).toMatchSnapshot();
+      });
+    });
 
-        expect(received).toEqual(expected);
+    describe('when I click the button', () => {
+      it('should call onClick function passing value and type', () => {
+        const onClick = jest.fn();
+        const wrapper = mount(<Button
+          type="num"
+          value={0}
+          text="0"
+          theme="grey"
+          color="pink"
+          onClick={onClick}
+        />);
+
+        wrapper.simulate('click');
+        const args = {
+          type: 'num',
+          value: 0,
+        };
+
+        expect(onClick).toHaveBeenCalledWith(args);
       });
     });
   });
