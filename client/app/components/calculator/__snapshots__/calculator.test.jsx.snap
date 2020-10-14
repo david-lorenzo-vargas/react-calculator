@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator render should render corrently 1`] = `
+<div
+  className="calculator"
+>
+  <Header
+    total={0}
+  />
+  <Body
+    onButtonClick={[Function]}
+  />
+</div>
+`;
