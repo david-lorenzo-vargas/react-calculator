@@ -16,21 +16,17 @@ const Button = (props) => {
   };
 
   return (
-    <div>
-      <button
-        type="button"
-        className={cx('button', {
-          [`button--theme-${theme}`]: theme,
-          [`button--${size}`]: size,
-          [`button--${color}`]: color,
-        })}
-        onClick={() => {
-          handleButtonClick();
-        }}
-      >
-        {text}
-      </button>
-    </div>
+    <button
+      type="button"
+      className={cx('button', {
+        [`button--theme-${theme}`]: theme,
+        [`button--${size}`]: size,
+        [`button--${color}`]: color,
+      })}
+      onClick={handleButtonClick}
+    >
+      {text}
+    </button>
   );
 };
 
