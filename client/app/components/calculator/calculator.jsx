@@ -45,10 +45,10 @@ class Calculator extends React.Component {
     return newButtonValue;
   }
 
-  handleOperation(value) {
+  handleOperation(type) {
     return {
       buttonValue: '',
-      buttonType: value,
+      buttonType: type,
       savedValue: this.getTotals(),
     };
   }
@@ -62,6 +62,8 @@ class Calculator extends React.Component {
     };
   }
 
+  // to be tested
+
   handlePercentage(value) {
     const { buttonValue, savedValue, buttonType } = this.state;
     return {
@@ -71,6 +73,7 @@ class Calculator extends React.Component {
       savedButtonType: buttonType,
     };
   }
+  // to be tested
 
   handleReset() {
     return {
@@ -79,6 +82,7 @@ class Calculator extends React.Component {
       savedValue: 0,
     };
   }
+  // to be tested
 
   handleNumber(value) {
     const { buttonValue } = this.state;
@@ -88,6 +92,7 @@ class Calculator extends React.Component {
       buttonValue: buttonValueNumber,
     };
   }
+  // to be tested
 
   handleOpposite(value) {
     const { buttonValue, savedValue, buttonType } = this.state;
