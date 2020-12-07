@@ -6,7 +6,7 @@ Calculator built in React with SCSS modules. Functionality has been tested with 
 Add, subtract, multiply, divide, get the percentage of a number, add the percentage, subtract the percentage, divide the percentage or multiply the percentage.
 
 ## Technologies
-HTML, SCSS modules, React, TDD(Enzyme, Snapshoots, Jest), Babel, Eslint, Stylelint, Webpack
+HTML, SCSS modules, JavaScript, React, TDD(Enzyme, Snapshoots, Jest), Babel, Eslint, Stylelint, Webpack
 
 ## Demo
 
